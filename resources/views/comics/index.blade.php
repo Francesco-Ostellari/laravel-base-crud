@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="container-fluid pe-5 ps-5">
   <div class="row">
     <h1 class="h1">Admin - All Comics</h1>
   </div>
