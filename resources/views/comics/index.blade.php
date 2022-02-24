@@ -46,7 +46,7 @@
     </div>
     <div class="row">
         <div class="col">
-            {{ $comics->links() }}
+          {{ $comics->links() }}
         </div>
     </div>
   </div>
