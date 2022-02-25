@@ -26,6 +26,7 @@
             <th>Description</th>
             <th>Photo</th>
             <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -38,6 +39,14 @@
             <td>{{ $comic->description }}</td>
             <td>{{ $comic->photo }}</td>
             <td><a class="btn btn-primary" href="{{ route('comics.show', $comic->id) }}">View</a> <a class="btn btn-primary mt-2" href="{{route('comics.edit', $comic->id)}}">Edit</a></td>
+            <td>
+              <form action="{{ route('comics.destroy', $comic->id) }}" method="post">
+                @csrf
+                @method('DELETE')
+                <input class="btn btn-danger" type="submit" value="Delete">
+              </form>
+              {{-- <button class="delete">Delete</button> --}}
+            </td>
           </tr>
         @endforeach
         </tbody>
