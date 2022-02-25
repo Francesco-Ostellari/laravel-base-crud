@@ -8,12 +8,12 @@ use Illuminate\Http\Request;
 class ComicController extends Controller
 {
     protected $ruleValidation =  [
-        'title' => 'required|max:80',
-        'author' => 'required|max:60',
+        'title' => 'required|max:60',
+        'author' => 'required|max:40',
         'price' => 'required|numeric',
-        'genre' => 'nullable',
+        'genre' => 'nullable|max:100',
         'description' => 'nullable',
-        'photo' => 'required',
+        'photo' => 'required|max:255',
     ];
 
     /**
