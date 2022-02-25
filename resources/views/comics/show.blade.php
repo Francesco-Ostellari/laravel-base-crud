@@ -5,6 +5,11 @@
 @endsection
 
 @section('content')
+  @if (session('status'))
+    <div class="alert alert-success">
+      {{ session('status') }}
+    </div>
+  @endif
 <div class="container">
   <div class="row">
     <div class="col">
@@ -18,6 +23,11 @@
     <div class="col">
       <div>{{ $comic->title }}</div>
       <div><h2>{{  $comic->price }} €</h2></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+        <a class="btn btn-primary mt-3" href="{{ route('comics.index') }}">Go Back</a>
     </div>
   </div>
 </div>
